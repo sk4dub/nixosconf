@@ -1,0 +1,39 @@
+#### GIT
+
+# CONFIGURER GIT
+git config --global user.email "skadub@gmail.com"
+git config --global user.name "sk4dub"
+
+# LOGIN HTTPS
+gh auth login
+
+# INITIALISATION ET PREMIER COMMIT
+git add *
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/sk4dub/nixosconf.git
+git push -u origin main
+
+# COMMIT SUIVANT
+git add *
+git commit -m "commit reason"
+git push -u origin main
+
+
+#### NIXOS
+
+# Lister les générations
+nixos-rebuild list-generations
+nix-env -p /nix/var/nix/profiles/system --list-generations
+
+# Supprimer toutes les gén sauf 1
+nix-env -p /nix/var/nix/profiles/system --delete-generations +1
+
+# Nettoyage
+nix-collect-garbage
+
+# MAJ du bootloader
+nixos-rebuild switch
+
+# MAJ du système complet
+nixos-rebuild switch --upgrade

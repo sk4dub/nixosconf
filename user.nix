@@ -15,7 +15,8 @@ in
     /* The home.stateVersion option does not have a default and must be set */
     home.stateVersion = "25.11";
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
-      
+    
+    #### PERSONNALISATION DE GNOME  
     dconf.settings = {
       "org/gnome/desktop/wm/preferences" = {
         button-layout = ":minimize,maximize,close"; /* Boutons min/max/close */
@@ -112,9 +113,8 @@ in
        /*restore-session = false; */
      };
      
-     
      "org/gnome/shell" = {
-       # Activer des extensions
+       /* Activer des extensions */
        enabled-extensions = [
          "appindicatorsupport@rgcjonas.gmail.com"
          "arcmenu@arcmenu.com"
@@ -123,7 +123,7 @@ in
          "dash-to-dock@micxgx.gmail.com"
          "user-theme@gnome-shell-extensions.gcampax.github.com"
        ];
-       # Epingler des apps au dock
+       /* Epingler des apps au dock */
        favorite-apps = [
          "net.nokyan.Resources.desktop"
          "org.gnome.Ptyxis.desktop"
@@ -134,7 +134,6 @@ in
        ];
      };
      
-     
      # Dash-to-Dock
      "org/gnome/shell/extensions/dash-to-dock" = {
        dock-position = "BOTTOM";
@@ -143,5 +142,44 @@ in
        disable-overview-on-startup = true;
      };
     };
-  };
-}
+    
+    #### PERSONNALISATION DES DOT FILES
+    programs.bash = {
+      shellAliases = {
+        /* ll = "ls -l";*/
+        ".." = "cd ..";
+      };
+    };
+    
+    programs.vim = {
+      enable = true;
+      extraConfig = 
+      ''
+        " Affichage des numéros de ligne"
+        set number
+        " Si indentation dans le code, on garde l'indentation sur une nouvelle ligne"
+        set autoindent
+        " Activation de la coloration syntaxique"
+        syntax on
+        " Theme desert"
+        color desert
+        
+        " Largeur visuelle d'une tabulation"
+        set tabstop=4
+        " Nb d'espaces pour l'indentation"
+        set shiftwidth=4
+        " Transformer les tabulations en espaces"
+        set expandtab
+        " Nb d'espaces qu'une tabulation insère en mode édition"
+        set softtabstop=4
+        
+        " Voir les caractères spéciaux
+        "set list
+        
+        " Désactivation de la sélection via la souris
+        "set mouse=
+      '';
+    };
+    
+  }; /* END HOME MANAGER */
+} /* END IN */
