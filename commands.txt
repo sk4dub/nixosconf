@@ -37,3 +37,6 @@ nixos-rebuild switch
 
 # MAJ du système complet
 nixos-rebuild switch --upgrade
+
+# Test sans rebuild
+nixos-rebuild dry-run

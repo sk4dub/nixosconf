@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./software.nix
+      ./flatpak.nix
       ./system.nix
       ./network.nix
       ./user.nix

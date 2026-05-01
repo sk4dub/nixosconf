@@ -145,6 +145,7 @@ in
     
     #### PERSONNALISATION DES DOT FILES
     programs.bash = {
+      enable = true;
       shellAliases = {
         /* ll = "ls -l";*/
         ".." = "cd ..";

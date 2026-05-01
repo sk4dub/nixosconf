@@ -5,9 +5,6 @@
     # POLICE DE CARACTERES
     redhat-official-fonts
     
-    # Passer les dossiers de HOME dans la langue correcte
-    #xdg-user-dirs
-    
     # ADMINISTRATION WEB INTERFACE
     cockpit
     
@@ -112,6 +109,19 @@
     epiphany
   ];
   
+  # Programmes spécifiques
   programs.vim.enable = true;
   programs.vim.package = pkgs.vim-full;
+  
+  # Flatpak
+  #services.flatpak.enable = true;
+  
+  # Ajout du dépôt flathub via un service systemd 
+  #systemd.services.flatpak-repo = {
+  #  wantedBy = [ "multi-user.target" ];
+  #  path = [ pkgs.flatpak ];
+  #  script = ''
+  #    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  #  '';
+  #};
 }
