@@ -2,10 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # POLICE DE CARACTERES
     redhat-official-fonts
     
     cockpit
     
+    # EXTENSIONS GNOME
     gnomeExtensions.appindicator
     gnomeExtensions.arcmenu
     gnomeExtensions.blur-my-shell
@@ -13,19 +15,26 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.user-themes
     gnomeExtensions.quick-settings-audio-panel
+        
+    # THEMES GNOME
+    adw-gtk3
     
+    # APPLICATIONS GNOME
     gnome-tweaks
     gnome-extension-manager
-    
+        
     ptyxis
     file-roller
     dconf-editor
     resources
+    guake
     
-    screen
+    # APPLICATIONS CONSOLE
+    screen /* multiplexeur */
     
     wget
     
+    gh
     git
     
     htop
@@ -50,9 +59,11 @@
     speedtest-cli
     sshfs
     
+    # SAUVEGARDE
     borgbackup
     plakar
     
+    # MULTIMEDIA
     sox
     vorbisgain
     mp3gain
@@ -60,10 +71,13 @@
     mpv
     vlc
     
+    # GRAPHISME
     gimp
     inkscape
     flameshot
     
+    # INTERNET
+    filezilla
     floorp-bin
     firefox
     thunderbird
@@ -71,20 +85,23 @@
     google-chrome
     telegram-desktop
     discord
-    
-    guake
-    
+      
+    # GESTIONNAIRE DE MOTS DE PASSE
     keepassxc
     
+    # RESEAU
     wireshark
     
+    # DEV
     vscode
     
+    # BUREAUTIQUE
     libreoffice-fresh
     hunspell
     hunspellDicts.fr-any
   ];
   
+  # Suppression de paquets inutiles
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     geary
