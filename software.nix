@@ -5,6 +5,10 @@
     # POLICE DE CARACTERES
     redhat-official-fonts
     
+    # Passer les dossiers de HOME dans la langue correcte
+    xdg-user-dirs
+    
+    # ADMINISTRATION WEB INTERFACE
     cockpit
     
     # EXTENSIONS GNOME

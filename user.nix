@@ -112,8 +112,9 @@ in
        /*restore-session = false; */
      };
      
-     # Activer des extensions
+     
      "org/gnome/shell" = {
+       # Activer des extensions
        enabled-extensions = [
          "appindicatorsupport@rgcjonas.gmail.com"
          "arcmenu@arcmenu.com"
@@ -122,7 +123,17 @@ in
          "dash-to-dock@micxgx.gmail.com"
          "user-theme@gnome-shell-extensions.gcampax.github.com"
        ];
+       # Epingler des apps au dock
+       favorite-apps = [
+         "net.nokyan.Resources.desktop"
+         "org.gnome.Ptyxis.desktop"
+         "org.gnome.Nautilus.desktop"
+         "org.gnome.TextEditor.desktop"
+         "ca.desrt.dconf-editor.desktop"
+         "firefox.desktop"
+       ];
      };
+     
      
      # Dash-to-Dock
      "org/gnome/shell/extensions/dash-to-dock" = {
