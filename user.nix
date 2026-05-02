@@ -144,6 +144,7 @@ in
     };
     
     #### PERSONNALISATION DES DOT FILES
+    # Alias BASH
     programs.bash = {
       enable = true;
       shellAliases = {
@@ -152,6 +153,7 @@ in
       };
     };
     
+    # Fichier de conf pour vim
     programs.vim = {
       enable = true;
       extraConfig = 
