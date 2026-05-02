@@ -109,6 +109,7 @@
     gnome-tour
     geary
     epiphany
+    xterm
   ];
   
   # Programmes spécifiques
