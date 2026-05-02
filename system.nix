@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  # Virtualisation VMWARE : NIXOS AS A GUEST
   virtualisation.vmware.guest.enable = true;
   
   # Optimisation Nix
@@ -13,13 +14,13 @@
     options = "--delete-older-than 15d";
   };
   
-  #SYSCTL
+  # SYSCTL
   boot.kernel.sysctl = {
     "vm.swappiness" = 2;
     #"kernel.sysrq" = 1;
   };
   
-  #ZRAM
+  # ZRAM
   zramSwap = {
     enable = true;
     algorithm = "lzo-rle";
@@ -29,7 +30,7 @@
   
   # Variables d'environnement
   environment.variables = {
-    ARNAUD = "valeur";
+    SK4DUB = "valeur";
   };
   
   #programs.bash.shellAliases = {
