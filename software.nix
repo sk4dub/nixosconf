@@ -79,11 +79,13 @@
     
     # INTERNET
     filezilla
-    floorp-bin
-    firefox
     thunderbird
-    vivaldi
+    
+    firefox
+    floorp-bin
     google-chrome
+    vivaldi
+    
     telegram-desktop
     discord
       
