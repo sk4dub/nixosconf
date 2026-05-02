@@ -53,11 +53,13 @@
     openFirewall = true;
   };
   
+  # SERVEUR OPENSSH
   services.openssh = {
     enable = true;
     openFirewall = true;
   };
-    
+  
+  # ACTIVATION DU PAREFEU
   networking.firewall = {
     enable = true;
     allowPing = true;
