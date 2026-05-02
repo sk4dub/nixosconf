@@ -21,7 +21,7 @@ in
     "${nix-flatpak}/modules/nixos.nix"
   ];
 
-  # Configure nix-flatpak
+  # Configurer nix-flatpak
   services.flatpak = {
     enable = true;
     packages = [
